@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #050508;
+    color: #e0e0f0;
+    font-family: "Syne", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0d0d14;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #6c63ff;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(13, 13, 20, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(108, 99, 255, 0.15);
+  }
+
+  .neon-border {
+    box-shadow: 0 0 0 1px rgba(108, 99, 255, 0.3),
+      inset 0 0 20px rgba(108, 99, 255, 0.03);
+  }
+
+  .input-field {
+    @apply w-full bg-void border border-border rounded-lg px-4 py-3 text-white 
+           font-mono text-sm placeholder-muted focus:outline-none focus:border-accent 
+           focus:ring-1 focus:ring-accent transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply w-full bg-accent hover:bg-violet-500 text-white font-semibold py-3 px-6 
+           rounded-lg transition-all duration-200 hover:shadow-lg 
+           hover:shadow-accent/25 active:scale-95 disabled:opacity-50 
+           disabled:cursor-not-allowed disabled:hover:bg-accent;
+  }
+
+  .btn-ghost {
+    @apply border border-border hover:border-accent text-text-dim hover:text-white 
+           font-semibold py-3 px-6 rounded-lg transition-all duration-200 
+           hover:bg-accent/5 active:scale-95;
+  }
+
+  .tag {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono;
+  }
+}
+
+/* Animated grid background */
+.bg-grid {
+  background-image: linear-gradient(
+      rgba(108, 99, 255, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(108, 99, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Glowing orb effect */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Input autofill dark override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #e0e0f0;
+  -webkit-box-shadow: 0 0 0px 1000px #050508 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Toast custom styles */
+.toast-dark {
+  background: #0d0d14 !important;
+  border: 1px solid #1a1a2e !important;
+  color: #e0e0f0 !important;
+  font-family: "Syne", sans-serif !important;
+}
