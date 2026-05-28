@@ -8,8 +8,14 @@ A production-ready full-stack authentication system built with React, Node.js, E
 
 ## 📸 Screenshots
 
-> Add screenshots of Login, Register, and Dashboard pages here after running the project.
+### Login Page
+![Login](./screenshots/login.png)
 
+### Register Page
+![Register](./screenshots/register.png)
+
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
 ---
 
 ## ✨ Features
