@@ -221,7 +221,7 @@ git push -u origin main
 
 **Your Name**  
 Prodigy Infotech Full Stack Internship  
-GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+GitHub: [@SiddharthBhat120](https://github.com/SiddharthBhat120)
 
 ---
 
